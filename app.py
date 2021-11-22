@@ -1,6 +1,3 @@
-# USAGE
-# python social_distance_detector.py --input pedestrians.mp4
-# python social_distance_detector.py --input pedestrians.mp4 --output output.avi
 
 # import the necessary packages
 from detector import *
@@ -21,7 +18,8 @@ ap.add_argument("-o", "--output", type=str, default="",
 ap.add_argument("-d", "--display", type=int, default=1,
 	help="whether or not output frame should be displayed")
 #for live video
-#args = vars(ap.parse_args())
+args = vars(ap.parse_args())
+#Note use any one i,e either live or pre-recorded videos
 #for recorderd video
 args = vars(ap.parse_args(["--input","pedestrians.mp4","--output","my_output.avi","--display","1"]))
 # load the COCO class labels our YOLO model was trained on
